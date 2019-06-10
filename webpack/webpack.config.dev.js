@@ -61,6 +61,17 @@ module.exports = merge(common,
               }
             },
             {
+              // Runs compiled CSS through postcss for vendor prefixing
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: true,
+                ident: 'postcss',
+                plugins: () => [
+                  require('autoprefixer')({ overrideBrowserslist : 'last 2 versions' })
+                ]
+              }
+            },
+            {
               // compiles Sass to CSS
               loader: "sass-loader",
               options: {
