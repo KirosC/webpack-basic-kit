@@ -19,7 +19,8 @@ module.exports = {
             loader: 'url-loader',
             options: {
               // On development we want to see where the file is coming from, hence we preserve the [path]
-              name: 'assets/img/[name].[contenthash:8].[ext]',
+              outputPath: 'assets/img/',
+              name: '[name].[contenthash:8].[ext]',
               limit: 8192
             }
           }
@@ -31,7 +32,8 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'assets/font/[name].[ext]'
+              outputPath: 'assets/font/',
+              name: '[name].[ext]'
             }
           }
         ]
