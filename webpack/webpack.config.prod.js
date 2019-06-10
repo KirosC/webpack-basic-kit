@@ -29,8 +29,8 @@ module.exports = merge(common,
         // Options similar to the same options in webpackOptions.output
         // both options are optional
         filename: 'assets/css/[name].[contenthash].css',
-        chunkFilename: '[name].[id].css',
-      })
+        chunkFilename: 'assets/css/[name].[contenthash].css',
+      }),
     ],
     module: {
       rules: [
@@ -47,7 +47,10 @@ module.exports = merge(common,
           test: /\.(sa|sc|c)ss$/,
           use: [
             {
-              loader: MiniCssExtractPlugin.loader
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                publicPath: '../../',
+              }
             },
             {
               // translates CSS into CommonJS
