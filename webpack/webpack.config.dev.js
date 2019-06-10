@@ -26,7 +26,7 @@ module.exports = merge(common,
       }),
       new webpack.HotModuleReplacementPlugin(),
       new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, '../src/pug/index.pug'),
+        template: path.resolve(__dirname, '../src/index.html'),
         inject: true,
         minify: false
       }),
@@ -70,13 +70,6 @@ module.exports = merge(common,
               }
             }
           ],
-        },
-        {
-          test: /\.pug$/,
-          loaders: 'pug-loader',
-          options: {
-            pretty: true
-          }
         },
         {
           test: /\.html$/,

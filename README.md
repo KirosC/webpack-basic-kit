@@ -24,11 +24,10 @@ A basic pre-configured webpack to start your web development project.
 
 ## Background
 It may be tedious to set up a web development environment when starting a new project every time. 
-Therefore, I created this starter kit which comprises loader for **Pug**, **CSS/Sass** and **JS**.
+Therefore, I created this starter kit which comprises loader for **CSS/Sass** and **JS**.
 
 ## Features
 - Babel
-- Pug
 - Sass
 - PostCSS
 - Purgecss

@@ -22,7 +22,7 @@ module.exports = merge(common,
       }),
       new webpack.optimize.ModuleConcatenationPlugin(),
       new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, '../src/pug/index.pug'),
+        template: path.resolve(__dirname, '../src/index.html'),
         inject: true,
       }),
       new MiniCssExtractPlugin({
@@ -73,10 +73,6 @@ module.exports = merge(common,
               }
             }
           ],
-        },
-        {
-          test: /\.pug$/,
-          loaders: 'pug-loader'
         },
         {
           test: /\.html$/,
